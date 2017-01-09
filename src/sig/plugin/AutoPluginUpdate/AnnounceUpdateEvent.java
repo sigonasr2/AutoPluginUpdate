@@ -16,6 +16,10 @@ public class AnnounceUpdateEvent extends Event{
 		return handlers;
 	}
 	
+	public static HandlerList getHandlerList() {
+	    return handlers;
+	}
+	
 	public String getAnnouncementMessage() {
 		return announce_msg;
 	}

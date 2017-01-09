@@ -66,14 +66,14 @@ public class PluginManager implements Runnable{
 							if (Bukkit.getOnlinePlayers().size()!=0) {
 								AutoPluginUpdate.BroadcastMessage("The server has detected a new version of "+ChatColor.YELLOW+plugins.get(ii).name+". The server will restart in 3 minutes!\n\n"+ChatColor.GRAY+ChatColor.ITALIC+"If all players leave, the update will occur immediately.");
 							} else {
-								AutoPluginUpdate.BroadcastMessage("The server has detected a new version of "+ChatColor.YELLOW+plugins.get(ii).name+"."+ChatColor.GRAY+ChatColor.ITALIC+"If all players leave, the update will occur immediately.");
+								AutoPluginUpdate.BroadcastMessage("The server has detected a new version of "+ChatColor.YELLOW+plugins.get(ii).name+".");
 							}
 							restarting=true;
 							AutoPluginUpdate.restarting_server=true;
 							//Save the new plugin hash.
 						
 						} else {
-							AutoPluginUpdate.BroadcastMessage("The server has detected a new version of "+ChatColor.YELLOW+plugins.get(ii).name+"."+ChatColor.GRAY+ChatColor.ITALIC+"If all players leave, the update will occur immediately.");
+							AutoPluginUpdate.BroadcastMessage("The server has detected a new version of "+ChatColor.YELLOW+plugins.get(ii).name+".");
 						}
 						if (restarting) {
 							AutoPluginUpdate.updateServer();
