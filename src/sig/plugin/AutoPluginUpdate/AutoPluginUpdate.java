@@ -109,7 +109,7 @@ public class AutoPluginUpdate extends JavaPlugin implements Listener{
 				for (int i=0;i<Bukkit.getWorlds().size();i++) {
 					Bukkit.getWorlds().get(i).save();
 				}
-				Bukkit.getScheduler().runTaskLater(Bukkit.getPluginManager().getPlugin("AutoPluginUpdate"), ()->{Bukkit.shutdown();}, 40);
+				Bukkit.getScheduler().runTaskLater(Bukkit.getPluginManager().getPlugin("AutoPluginUpdate"), ()->{Bukkit.shutdown();}, 60);
 			}
 		}
 	}
@@ -140,7 +140,7 @@ public class AutoPluginUpdate extends JavaPlugin implements Listener{
 				for (int i=0;i<Bukkit.getWorlds().size();i++) {
 					Bukkit.getWorlds().get(i).save();
 				}
-				Bukkit.getScheduler().runTaskLater(Bukkit.getPluginManager().getPlugin("AutoPluginUpdate"), ()->{Bukkit.shutdown();}, 40);
+				Bukkit.getScheduler().runTaskLater(Bukkit.getPluginManager().getPlugin("AutoPluginUpdate"), ()->{Bukkit.shutdown();}, 60);
 			}
 		},20*180*((Bukkit.getOnlinePlayers().size()==0)?0:1)+1);
 		
