@@ -15,19 +15,19 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class AutoPluginUpdate extends JavaPlugin implements Listener{
 	
-	public final String LOG_PREFIX = "[AutoPluginUpdate]";
+	public final static String LOG_PREFIX = "[AutoPluginUpdate]";
 	
 	public AutoPluginUpdate plugin = this;
 	public static File datafolder;
 	public static boolean restarting_server=false;
 	public static boolean main_server=false;
 	
-	public final int LOG_ERROR=0;
-	public final int LOG_WARNING=1;
-	public final int LOG_NORMAL=2;
-	public final int LOG_DETAIL=3;
-	public final int LOG_VERBOSE=4;
-	public final int LOG_DEBUG=5;
+	public final static int LOG_ERROR=0;
+	public final static int LOG_WARNING=1;
+	public final static int LOG_NORMAL=2;
+	public final static int LOG_DETAIL=3;
+	public final static int LOG_VERBOSE=4;
+	public final static int LOG_DEBUG=5;
 	
 	public static PluginManager pluginupdater;
 
@@ -86,7 +86,7 @@ public class AutoPluginUpdate extends JavaPlugin implements Listener{
 		}
 	}
     
-	private void log(String msg, int loglv) {
+	public static void log(String msg, int loglv) {
 		switch (loglv) {
 			case LOG_ERROR:{
 				Bukkit.getConsoleSender().sendMessage(LOG_PREFIX+" "+ChatColor.RED+"[ERROR]"+ChatColor.RESET+msg+ChatColor.RESET);
@@ -105,7 +105,7 @@ public class AutoPluginUpdate extends JavaPlugin implements Listener{
 		public void run() {
 			if (Bukkit.getOnlinePlayers().size()==0 && restarting_server) {
 				Bukkit.savePlayers();
-				BroadcastMessage(ChatColor.ITALIC+"Server is shutting down...");
+				//BroadcastMessage(ChatColor.ITALIC+"Server is shutting down...");
 				for (int i=0;i<Bukkit.getWorlds().size();i++) {
 					Bukkit.getWorlds().get(i).save();
 				}
