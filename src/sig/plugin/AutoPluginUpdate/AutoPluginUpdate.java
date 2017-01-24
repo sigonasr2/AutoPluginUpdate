@@ -33,9 +33,9 @@ public class AutoPluginUpdate extends JavaPlugin implements Listener{
 
 	@Override
     public void onEnable() {
-		log("Booting up...",LOG_NORMAL);
+		//log("Booting up...",LOG_NORMAL);
 		datafolder = getDataFolder(); 
-		log("Data folder is located at "+datafolder,LOG_DETAIL);
+		//log("Data folder is located at "+datafolder,LOG_DETAIL);
 		
 		CheckIfMainServer();
 		
@@ -47,7 +47,7 @@ public class AutoPluginUpdate extends JavaPlugin implements Listener{
 		Bukkit.getPluginManager().registerEvents(this, this);
 		
 		if (!restarting_server && main_server) {
-			Bukkit.getScheduler().runTaskTimerAsynchronously(this, pluginupdater, 6000l, 6000l);
+			Bukkit.getScheduler().runTaskTimerAsynchronously(this, pluginupdater, 600l, 600l);
 		}
 	}
 

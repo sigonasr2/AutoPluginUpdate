@@ -69,6 +69,7 @@ public class PluginManager implements Runnable{
 			    HttpURLConnection httpCon = null;
 				try {
 					httpCon = (HttpURLConnection) url.openConnection();
+					httpCon.setRequestMethod("HEAD");
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
