@@ -61,7 +61,6 @@ public class PluginManager implements Runnable{
 			try {
 				url = new URL(plugins.get(i).url);
 			} catch (MalformedURLException e2) {
-				// TODO Auto-generated catch block
 				e2.printStackTrace();
 			}
 			if (url!=null) {
@@ -71,7 +70,6 @@ public class PluginManager implements Runnable{
 					httpCon = (HttpURLConnection) url.openConnection();
 					httpCon.setRequestMethod("HEAD");
 				} catch (IOException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				if (httpCon!=null) {
