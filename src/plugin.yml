@@ -1,4 +1,4 @@
 name: AutoPluginUpdate
 main: sig.plugin.AutoPluginUpdate.AutoPluginUpdate
-version: 001
+version: 002
 commands:

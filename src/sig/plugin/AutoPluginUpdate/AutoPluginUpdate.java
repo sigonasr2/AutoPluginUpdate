@@ -41,7 +41,7 @@ public class AutoPluginUpdate extends JavaPlugin implements Listener{
 		
 		pluginupdater = new PluginManager(plugin);
 		pluginupdater.AddPlugin("TwosideKeeper", "https://dl.dropboxusercontent.com/s/z5ram6vi3jipiit/TwosideKeeper.jar");
-		pluginupdater.AddPlugin("aPlugin", "https://dl.dropboxusercontent.com/u/62434995/aPlugin.jar");
+		pluginupdater.AddPlugin("aPlugin", "https://dl.dropboxusercontent.com/s/5wnayl19o1dxeq5/aPlugin.jar");
 		pluginupdater.AddPlugin("AutoPluginUpdate", "https://dl.dropboxusercontent.com/s/q59lndgromemv0p/AutoPluginUpdate.jar");
 		
 		Bukkit.getPluginManager().registerEvents(this, this);
